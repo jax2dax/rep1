@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<title>text supply</title>
+<body>
+   <input placeholder="cost of order" class="costbar"> 
+   <button onclick="calc()"> calculate</button>
+   <p class="par"> </p>
+   <input class="name csname" placeholder="enter name" onkeydown="keydown(); "
+   ><p class="type"></p>
+    <button  class="submit cssubmit" onclick="keydown(); operation();greet()">submit</button>
+
+    <button class="next">...</button>
+    <p class="lol"></p>
+
+
+<script>
+            function calc(){
+
+            const element= document.querySelector('.costbar');
+            let cost = Number(element.value);
+            if(cost> 40){cost+=10}
+
+            document.querySelector('.par').innerHTML=`the cost is $${cost}`
+            }
+    function keydown(){statview
+    .innerHTML='typing...';
+
+            }
+        let namevalue= document.querySelector('.name')
+        let statview =document.querySelector('.type')
+        let buttonelement =document.querySelector('.submit')
+        function operation()
+        
+        {
+         
+      
+           
+              if(buttonelement.innerHTML==='submit') {    
+                buttonelement.innerHTML='submitted';
+                    buttonelement.classList.add('cssubmitted');
+                    next();}
+              else {buttonelement.innerHTML='submit';
+                buttonelement.classList.remove('cssubmitted');
+              }
+
+            }
+            //greeting
+   function greet(){
+        let personname=document.querySelector('.name').value
+        document.querySelector('.lol').innerHTML=`hello  ${personname}!! how are you doing today`}
+        
+    //nextbutton
+let nextbut= document.querySelector('.next')
+function next(){
+    nextbut.innerHTML='next'
+   
+
+    }
+
+</script>
+<style>
+    .cssubmit{
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-bottom: 14px;
+        padding-top: 14px;
+        color:rgb(255, 0, 0);
+        border-radius: 40px;
+        border:none;
+        background-color: black;
+        font-weight: bold;
+        cursor:pointer;
+    }
+    .cssubmitted{
+        color:rgb(26, 4, 4);
+        background-color: rgb(105, 45, 45);
+        border: 40px;
+        border-color: black;
+
+    }
+    .csname{
+        background: white;
+        color:rgb(209, 31, 31);
+        padding-bottom: 13px;
+        padding-top: 16px;
+    
+    }
+    body{
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+        background-color: rgb(106, 163, 106);
+        font-weight:bold ;
+        font-size: larger;
+
+    }
+    
+    
+    
+</style>
+</body>
+</html>
